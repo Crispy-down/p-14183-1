@@ -1,9 +1,12 @@
 "use client";
 
-import { apiFetch } from "@/lib/backend/client";
-import type { components } from "@/lib/backend/apiV1/schema";
 import { useRouter } from "next/navigation";
+
 import { use, useEffect, useState } from "react";
+
+import { apiFetch } from "@/lib/backend/client";
+
+import type { components } from "@/lib/backend/apiV1/schema";
 
 type PostWithContentDto = components["schemas"]["PostWithContentDto"];
 
@@ -21,7 +24,7 @@ export default function Page({ params }: { params: Promise<{ id: string }> }) {
       .catch((error) => {
         alert(`${error.resultCode} : ${error.msg}`);
       });
-  }, []);
+  }, [id]);
 
   if (post == null) return <div>로딩중...</div>;
 

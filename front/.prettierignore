@@ -26,4 +26,6 @@ node_modules
 
 # 기타 무시할 파일
 package-lock.json
+pnpm-lock.yaml
 yarn.lock
+next-env.d.ts
