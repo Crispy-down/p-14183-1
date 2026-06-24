@@ -27,7 +27,7 @@ public class BaseInitData {
         return args -> {
             self.work1();
             self.work2();
-            self.work3();
+
         };
     }
 
@@ -75,7 +75,4 @@ public class BaseInitData {
         post2.addComment(memberUser3, "댓글 2-2");
     }
 
-    @Transactional
-    public void work3() {
-    }
 }
